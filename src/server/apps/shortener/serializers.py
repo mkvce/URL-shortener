@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from models import URL
+from .models import URL
 
 
 class UrlSerializer(serializers.ModelSerializer):
