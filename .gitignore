@@ -1,4 +1,4 @@
 /src/server/db.sqlite3
 .idea
 /src/server/.idea/
-/src/server/venv/
+/venv
