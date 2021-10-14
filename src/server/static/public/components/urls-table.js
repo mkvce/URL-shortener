@@ -13,7 +13,7 @@ app.component('urls-table', {
       axios
           .get('/u/urls')
           .then(response => {
-            this.urls = response.data.results;
+            this.urls = response.data;
           })
           .catch(error => {
             console.log(error);

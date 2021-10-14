@@ -43,7 +43,7 @@ app.component('url-input', {
         address: this.urlAddress
       };
       axios
-          .post('/shortener/urls/', URL)
+          .post('/u/urls/', URL)
           .then(response => {
             this.shortenedURL = this.host + 'u/' + response.data.slug;
           })

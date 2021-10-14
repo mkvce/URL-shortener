@@ -20,4 +20,4 @@ class URL(models.Model):
 
     def increase_visits(self):
         self.visits += 1
-        super().save()
+        self.save()
