@@ -5,18 +5,13 @@ app.component('urls-table', {
     }
   },
   props: ['host'],
-  watch: {
-    currentPage(page) {
-      this.updateURLs();
-    }
-  },
   methods: {
     shortenedAddress(slug) {
       return this.host + 'u/' + slug;
     },
     updateURLs() {
       axios
-          .get('/shortener/urls')
+          .get('/u/urls')
           .then(response => {
             this.urls = response.data.results;
           })

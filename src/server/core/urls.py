@@ -20,7 +20,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('shortener/', include('apps.shortener.urls')),
+    path('u/', include('apps.shortener.urls')),
     path('', include('apps.public.urls')),
 ]
 

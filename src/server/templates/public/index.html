@@ -11,7 +11,9 @@
 
   <!-- Import bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
@@ -23,19 +25,22 @@
 </head>
 
 <body>
-<div id='app' class='container-fluid m-0 p-0'>
-  <header class='text-center p-3'>
-    <span>سریع‌تر از همیشه لینکت رو کوتاه کن!</span>
-  </header>
-  <hr class='mt-1 mb-0'>
-  <main>
-    <url-input :host='host'></url-input>
-    <urls-table :host='host'></urls-table>
-  </main>
-</div>
-<script src='{% static "public/index.js" %}'></script>
-<script src='{% static "public/components/url-input.js" %}'></script>
-<script src='{% static "public/components/urls-table.js" %}'></script>
+  <div id='app' class='container-fluid m-0 p-0' dir="rtl">
+    <header class='text-center p-3'>
+      <span>سریع‌تر از همیشه لینکت رو کوتاه کن!</span>
+    </header>
+    <hr class='mt-1 mb-0'>
+    <main>
+      <url-input :host='host'></url-input>
+      <urls-table :host='host'></urls-table>
+    </main>
+  </div>
+  <script src='{% static "public/index.js" %}'></script>
+  <script src='{% static "public/components/url-input.js" %}'></script>
+  <script src='{% static "public/components/urls-table.js" %}'></script>
+  <script>
+    const mountedApp = app.mount("#app")
+  </script>
 </body>
 
 
