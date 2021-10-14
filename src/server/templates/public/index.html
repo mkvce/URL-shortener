@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +16,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
   <!-- Import Vue.js -->
-  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue@next"></script>
 
   <!-- Import axios -->
   <script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
@@ -31,10 +33,9 @@
     <urls-table :host='host'></urls-table>
   </main>
 </div>
-<script src='{% static "public/js/index.js" %}'></script>
-<script src='{% static "public/js/components/urlInput.js" %}'></script>
-<script src='{% static "public/js/components/urlsTable.js" %}'></script>
-<script src='{% static "public/js/components/pageFooter.js" %}'></script>
+<script src='{% static "public/index.js" %}'></script>
+<script src='{% static "public/components/url-input.js" %}'></script>
+<script src='{% static "public/components/urls-table.js" %}'></script>
 </body>
 
 
